@@ -10,7 +10,6 @@ function App() {
   const [form, setForm] = useState({ name: "", ingredients: "", steps: "" });
   const [search, setSearch] = useState("");
 
-  // Lưu vào localStorage khi thay đổi
   useEffect(() => {
     localStorage.setItem("recipes", JSON.stringify(recipes));
   }, [recipes]);
@@ -26,7 +25,6 @@ function App() {
     setRecipes(recipes.filter((_, i) => i !== index));
   };
 
-  // Lọc công thức theo nguyên liệu (case-insensitive)
   const filteredRecipes = recipes.filter((r) =>
     r.ingredients.toLowerCase().includes(search.toLowerCase())
   );
@@ -34,8 +32,6 @@ function App() {
   return (
     <div className="App">
       <h1>📖 Recipe Book</h1>
-
-      {/* Form thêm công thức */}
       <form onSubmit={addRecipe} className="form">
         <input
           type="text"
@@ -57,7 +53,6 @@ function App() {
         <button type="submit">➕ Thêm công thức</button>
       </form>
 
-      {/* Ô tìm kiếm */}
       <input
         type="text"
         className="search-box"
@@ -66,7 +61,6 @@ function App() {
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      {/* Danh sách công thức */}
       <ul className="recipe-list">
         {filteredRecipes.map((r, i) => (
           <li key={i}>

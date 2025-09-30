@@ -24,8 +24,7 @@ Recipe Book là một **Progressive Web App (PWA)** được xây dựng bằng 
 - ➕ Thêm công thức mới (tên món, nguyên liệu, các bước).
 - 🗑️ Xóa công thức.
 - 🔍 Tìm kiếm công thức theo nguyên liệu.
-- 📦 Dữ liệu được lưu trong LocalStorage, không mất khi reload.
-- 📱 Hỗ trợ cài đặt app trên **Android, iOS, Desktop**.
+- 📱 Hỗ trợ cài đặt app trên **Android, Desktop**.
 
 ---
 
